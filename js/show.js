@@ -1,6 +1,5 @@
 const SHOWS_APIURL =
-  'https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=' +
-  page
+  'https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1'
 
 const SHOW_SEARCHAPI =
   'https://api.themoviedb.org/3/search/tv?&api_key=04c35731a5ee918f014970082a0088b1&query='
@@ -64,4 +63,3 @@ const handleNextPage = (e) => {
 
 pageNext.addEventListener('click', handleNextPage)
 pagePrev.addEventListener('click', handlePrevPage)
-console.log(pageNext)

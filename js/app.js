@@ -7,7 +7,6 @@ const inputSwitch = document.querySelector('.input-switch')
 const body = document.querySelector('body')
 const pagePrev = document.getElementById('page-prev')
 const pageNext = document.getElementById('page-next')
-const pageCount = document.getElementById('page-count')
 const switchMode = () => {
   inputSwitch.classList.add('active')
   body.classList.toggle('active')

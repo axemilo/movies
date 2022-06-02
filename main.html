@@ -27,10 +27,10 @@
               <a href="main.html" class="nav__link fs-3 fw-bold">Home</a>
             </li>
             <li class="nav__item me-3">
-              <a href="html/movies.html" class="nav__link fs-6">Movies</a>
+              <a href="movies.html" class="nav__link fs-6">Movies</a>
             </li>
             <li class="nav__item">
-              <a href="html/shows.html" class="nav__link fs-6">TV Shows</a>
+              <a href="shows.html" class="nav__link fs-6">TV Shows</a>
             </li>
           </ul>
         </nav>
@@ -49,6 +49,33 @@
       </div>
     </header>
     <main class="main">
+      <section class="carousel">
+        <div
+          id="carouselExampleFade"
+          class="container-fluid carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <ul id="carousel-list" class="carousel__list carousel-inner"></ul>
+          <button
+            class="carousel-control-prev carousel-btn"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next carousel-btn"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
       <section class="trending">
         <div class="container trending__container">
           <h2 class="text-center fw-bold">For you</h2>
@@ -56,9 +83,36 @@
         </div>
       </section>
     </main>
+    <!-- Templates -->
+
+    <template id="carousel-template" class="template">
+      <li class="carousel-item active carousel__item">
+        <img
+          id="carousel-img"
+          src="images/bgc.jpg"
+          class="carousel__img d-block w-100"
+          alt=""
+        />
+        <h3 id="carousel-title" class="carousel__title">Avengers</h3>
+        <p id="carousel-text" class="carousel__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi
+          suscipit, commodi culpa qui, repellendus voluptate placeat quis sit
+          dolore esse? Culpa officiis consequuntur temporibus, nihil aliquam
+          voluptatibus! Delectus aspernatur nemo nesciunt, inventore
+          consequuntur culpa unde! Eveniet, qui deleniti! Eaque, temporibus?
+          Voluptatem, perspiciatis est inventore dolor porro natus reiciendis
+          accusantium! At ipsam hic accusamus soluta ad officia necessitatibus
+          debitis voluptates? Suscipit eum rerum tempore deleniti quas soluta
+          perspiciatis libero tenetur?
+        </p>
+      </li>
+    </template>
 
     <template class="trending-template template">
-      <li id="trending-item" class="item text-center my-3">
+      <li
+        id="trending-item"
+        class="item text-center my-3 ms-4 carousel-item active"
+      >
         <img
           id="trending-img"
           class="item__img"
@@ -103,6 +157,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/app.js"></script>
+    <script src="js/carousel.js"></script>
     <script src="js/trending.js"></script>
   </body>
 </html>
