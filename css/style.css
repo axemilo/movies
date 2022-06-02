@@ -32,7 +32,6 @@ a {
 
 .list {
   grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 100px;
 }
 
 .item {
@@ -122,4 +121,23 @@ body.active .form__input::placeholder {
 
 .input-switch {
   cursor: pointer;
+}
+
+.item__bookmark {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  padding: 3px;
+  border-top-left-radius: 10px;
+  transition: fill 300ms ease;
+}
+
+.item__bookmark:hover {
+  fill: #3bb33b;
+}
+
+.item__bookmark.active {
+  fill: #3bb33b;
 }
