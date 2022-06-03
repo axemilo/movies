@@ -2,7 +2,6 @@ const CAROUSEL_API =
   'https://api.themoviedb.org/3/trending/all/day?api_key=04c35731a5ee918f014970082a0088b1'
 const cardElCarousel = document.getElementById('carousel-template').content
 const carouselList = document.getElementById('carousel-list')
-
 async function getCarousel(url) {
   const resp = await fetch(url)
   const respData = await resp.json()
@@ -21,7 +20,7 @@ const renderCarousel = (movies) => {
     const cardImg = card.getElementById('carousel-img')
     const cardTitle = card.getElementById('carousel-title')
     const cardText = card.getElementById('carousel-text')
-
+    const cardItem = card.getElementById('carousel-item')
     cardImg.src = IMGPATH + backdrop_path
     cardTitle.textContent = title
     cardText.textContent = overview

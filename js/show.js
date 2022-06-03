@@ -48,6 +48,10 @@ form.addEventListener('submit', (event) => {
   }
 })
 
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
+})
+
 const handlePrevPage = (e) => {
   e.preventDefault()
   if (page > 1) {

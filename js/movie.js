@@ -21,7 +21,7 @@ getMovies(MOVIE_APIURL)
 const renderMovies = (movies) => {
   movieList.innerHTML = null
   movies.forEach((movie) => {
-    const { poster_path, vote_average, overview } = movie
+    const { poster_path, vote_average, overview, title } = movie
     const card = cardElMovie.cloneNode(true)
     const imgCard = card.querySelector('#movie-img')
     const ratCard = card.querySelector('#movie-rating')
@@ -31,8 +31,17 @@ const renderMovies = (movies) => {
     ratCard.textContent = vote_average
     reviewCard.textContent = overview
     movieList.appendChild(card)
+
     if (vote_average.toString().length < 3) {
       ratCard.textContent = vote_average + '.0'
+    }
+  })
+  movies.sort((a, b) => {
+    console.log(a.title)
+    if (a.title.toLowerCase() < b.title.toLowerCase()) {
+      return -1
+    } else {
+      return 1
     }
   })
 }
