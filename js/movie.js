@@ -69,6 +69,9 @@ const handleNextPage = (e) => {
   e.preventDefault()
   page += 1
   getMovies(getAPI(MOVIE_APIURL))
+  if (page == 10) {
+    page = 1
+  }
 }
 
 pageNext.addEventListener('click', handleNextPage)

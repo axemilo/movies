@@ -80,6 +80,11 @@
         <div class="container trending__container">
           <h2 class="text-center fw-bold mb-5">For you</h2>
           <ul id="trending-list" class="list d-grid list-unstyled"></ul>
+          <h2 class="text-center fw-bold mb-5">Bookmarks</h2>
+          <ul
+            id="bookmark-list"
+            class="bookmark__list d-grid list-unstyled"
+          ></ul>
         </div>
       </section>
     </main>
@@ -132,6 +137,7 @@
         >
           <g>
             <path
+              class="bookmark__btn js-bookmark"
               id="bookmark-btn"
               d="M885.344,319.071l-258-3.8l-102.7-264.399c-19.8-48.801-88.899-48.801-108.6,0l-102.7,264.399l-258,3.8
          c-53.4,3.101-75.1,70.2-33.7,103.9l209.2,181.4l-71.3,247.7c-14,50.899,41.1,92.899,86.5,65.899l224.3-122.7l224.3,122.601
@@ -139,6 +145,29 @@
             />
           </g>
         </svg>
+      </li>
+    </template>
+    <template id="bookmark-template">
+      <li
+        id="bookmark-item"
+        class="bookmark__item d-flex align-items-center mb-4"
+      >
+        <p id="bookmark-numb" class="fs-2 me-3">1</p>
+        <img
+          id="bookmark-img"
+          class="mx-4"
+          src="https://picsum.photos/seed/picsum/100/150"
+          alt=""
+          width="100"
+          height="150"
+        />
+        <p id="bookmark-title" class="bookmark__title fs-3">Avengers</p>
+        <button
+          id="bookmark-remove"
+          class="btn btn-danger ms-auto bookmark-remove"
+        >
+          Remove
+        </button>
       </li>
     </template>
     <script
